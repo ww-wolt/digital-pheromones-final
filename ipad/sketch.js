@@ -110,6 +110,12 @@ function setup() {
     networkData[2138].xMeter,
     networkData[2138].yMeter
   );
+
+  // Reset coordinate every 3.5 minutes for exhibition setting
+  let resetInterval = setInterval(() => {
+    viewXOrigin = 12990;
+    viewYOrigin = 1200;
+  }, 3.5 * 60 * 1000);
 }
 
 function draw() {
